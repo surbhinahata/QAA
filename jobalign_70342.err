@@ -1,0 +1,23 @@
+	Command being timed: "STAR --runThreadN 16 --runMode alignReads --outFilterMultimapNmax 3 --outSAMunmapped Within KeepPairs --alignIntronMax 1000000 --alignMatesGapMax 1000000 --readFilesCommand zcat --readFilesIn /projects/bgmp/surbhin/bioinfo/Bi623/QAA/trimmomatic_results/paired.V1_2_2B_control_R1.fastq.gz /projects/bgmp/surbhin/bioinfo/Bi623/QAA/trimmomatic_results/paired.V1_2_2B_control_R2.fastq.gz --genomeDir /projects/bgmp/surbhin/bioinfo/Bi623/QAA/mouse_database_run_out --outFileNamePrefix alignmentfile2_2B"
+	User time (seconds): 254.99
+	System time (seconds): 8.26
+	Percent of CPU this job got: 659%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:39.90
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 28570776
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 248956
+	Voluntary context switches: 44103
+	Involuntary context switches: 1301
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

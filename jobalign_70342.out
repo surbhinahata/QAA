@@ -1,0 +1,7 @@
+	/projects/bgmp/surbhin/miniconda3/envs/QAA1/bin/STAR-avx2 --runThreadN 16 --runMode alignReads --outFilterMultimapNmax 3 --outSAMunmapped Within KeepPairs --alignIntronMax 1000000 --alignMatesGapMax 1000000 --readFilesCommand zcat --readFilesIn /projects/bgmp/surbhin/bioinfo/Bi623/QAA/trimmomatic_results/paired.V1_2_2B_control_R1.fastq.gz /projects/bgmp/surbhin/bioinfo/Bi623/QAA/trimmomatic_results/paired.V1_2_2B_control_R2.fastq.gz --genomeDir /projects/bgmp/surbhin/bioinfo/Bi623/QAA/mouse_database_run_out --outFileNamePrefix alignmentfile2_2B
+	STAR version: 2.7.10b   compiled: 2023-05-25T06:56:23+0000 :/opt/conda/conda-bld/star_1684997536154/work/source
+Sep 14 17:36:58 ..... started STAR run
+Sep 14 17:36:58 ..... loading genome
+Sep 14 17:37:17 ..... started mapping
+Sep 14 17:37:38 ..... finished mapping
+Sep 14 17:37:38 ..... finished successfully
