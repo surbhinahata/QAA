@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#SBATCH --account=bgmp                    #REQUIRED: which account to use
+#SBATCH --partition=bgmp               #REQUIRED: which partition to use
+#SBATCH --cpus-per-task=16                #optional: number of cpus, default is 1
+#SBATCH --mem=32GB                        #optional: amount of memory, default is 4GB
+#SBATCH --job-name=star_align      ### Job Name
+#SBATCH --output=jobalign_%j.out         ### File in which to store job output
+#SBATCH --error=jobalign_%j.err
+
+/usr/bin/time -v STAR --runThreadN 16 --runMode alignReads \
+--outFilterMultimapNmax 3 \
+--outSAMunmapped Within KeepPairs \
+--alignIntronMax 1000000 --alignMatesGapMax 1000000 \
+--readFilesCommand zcat \
+--readFilesIn /projects/bgmp/surbhin/bioinfo/Bi623/QAA/trimmomatic_results/paired.V1_2_2B_control_R1.fastq.gz /projects/bgmp/surbhin/bioinfo/Bi623/QAA/trimmomatic_results/paired.V1_2_2B_control_R2.fastq.gz \
+--genomeDir /projects/bgmp/surbhin/bioinfo/Bi623/QAA/mouse_database_run_out \
+--outFileNamePrefix alignmentfile2_2B 
+#--readFilesIn /projects/bgmp/surbhin/bioinfo/Bi623/QAA/trimmomatic_results/pairedundertermined_S0_L008_R1.fastq.gz /projects/bgmp/surbhin/bioinfo/Bi623/QAA/trimmomatic_results/paired.Undetermined_S0_L008_R2.fastq.gz \
+#--genomeDir /projects/bgmp/surbhin/bioinfo/Bi623/QAA/mouse_database_run_out \
+#--outFileNamePrefix alignmentfile
