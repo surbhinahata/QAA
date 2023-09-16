@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#SBATCH --account=bgmp                    #REQUIRED: which account to use
+#SBATCH --partition=bgmp               #REQUIRED: which partition to use
+#SBATCH --cpus-per-task=16                #optional: number of cpus, default is 1
+#SBATCH --mem=32GB                        #optional: amount of memory, default is 4GB
+#SBATCH --job-name=star_database_mouse      ### Job Name
+#SBATCH --output=job_%j.out         ### File in which to store job output
+#SBATCH --error=job_%j.err
+
+/usr/bin/time -v STAR \
+--runThreadN 16 \
+--runMode genomeGenerate \
+--genomeDir /projects/bgmp/surbhin/bioinfo/Bi623/QAA/mouse_database_run_out \
+--genomeFastaFiles /projects/bgmp/surbhin/bioinfo/Bi623/QAA/Mus_musculus.GRCm39.dna.primary_assembly.fa \
+--sjdbGTFfile /projects/bgmp/surbhin/bioinfo/Bi623/QAA/Mus_musculus.GRCm39.110.gtf \
